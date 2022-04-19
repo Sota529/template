@@ -1,7 +1,6 @@
-import type { AppProps } from 'next/app'
 import 'src/styles/reset.css'
 
-function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
+function MyApp({ Component, pageProps }: any): any {
   return <Component {...pageProps} />
 }
 
