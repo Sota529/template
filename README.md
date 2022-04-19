@@ -1,6 +1,9 @@
 ## これは何
 ちょっと試したいときに、環境整えるの面倒臭いと思っていたので作りました
 
+## 使い方
+create-next-app -e https://github.com/Sota529/template
+
 ## 入れたもの
 - next
 - TypeScript
@@ -13,3 +16,4 @@
 
 ## 今後入れたい
 - Jest
+
