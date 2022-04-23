@@ -4,7 +4,7 @@ import { render, fireEvent } from '@testing-library/react'
 import { Button } from './Button'
 import { handleClick } from 'src/utis'
 jest.mock('src/utis', () => {
-  return { handleClick: jest.fn() }
+  return { ...jest.requireActual('./Button'), handleClick: jest.fn() }
 })
 const handleClickMock = handleClick as jest.MockedFunction<typeof handleClick>
 
