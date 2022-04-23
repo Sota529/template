@@ -1,14 +1,19 @@
 import Link from 'next/link'
-import React from 'react'
+import { handleClick } from 'src/utis'
 
 interface Props {
-  value: string
+  link: {
+    href: string
+    value: string
+  }
 }
 
-export const Button: React.FC<Props> = (value) => {
+export const Button: React.FC<Props> = ({ link }) => {
   return (
-    <Link href="/">
-      <a>back</a>
-    </Link>
+    <div data-testid="button-wrapper" onClick={handleClick}>
+      <Link href={link.href}>
+        <a>{link.value}</a>
+      </Link>
+    </div>
   )
 }
