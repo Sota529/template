@@ -11,6 +11,12 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "lint-staged": {
+    "*": [
+      "npx prettier --write .",
+      "npx eslint . --check"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -46,10 +52,11 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "husky": "^7.0.0",
+    "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "jest-transformer-mdx": "^3.3.0",
+    "lint-staged": "^12.4.1",
     "prettier": "2.5.1",
     "pretty-quick": "^3.1.3",
     "react-test-renderer": "^18.0.0",
