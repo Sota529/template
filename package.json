@@ -11,18 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "lint-staged": {
-    "*": [
-      "npx prettier --write .",
-      "npx eslint . --check"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test"
-    }
-  },
+
   "dependencies": {
     "next": "12.0.7",
     "react": "17.0.2",
