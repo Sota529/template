@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "^17.1.0",
+    "react-dom": "^17.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -23,7 +23,7 @@
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
-    "@storybook/addon-storyshots": "^6.4.22",
+    "@storybook/addon-storyshots": "^6.5.7",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.10",
     "@testing-library/jest-dom": "^5.16.4",
@@ -48,7 +48,7 @@
     "lint-staged": "^12.4.1",
     "prettier": "2.5.1",
     "pretty-quick": "^3.1.3",
-    "react-test-renderer": "^18.0.0",
+    "react-test-renderer": "^17.1.0",
     "ts-jest": "^27.1.4",
     "typescript": "4.5.4"
   }
