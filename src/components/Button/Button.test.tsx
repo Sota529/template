@@ -15,6 +15,10 @@ describe('<Button>', () => {
       value: 'back'
     }
   }
+  it('should render correctly', () => {
+    const { container } = render(<Button {...props} />)
+    expect(container).toMatchSnapshot()
+  })
   it('テキストが表示されているか', () => {
     const { getByTestId } = render(<Button {...props} />)
     expect(getByTestId('button-wrapper')).toHaveTextContent('back')
