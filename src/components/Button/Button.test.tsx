@@ -9,16 +9,6 @@ jest.mock('src/utis', () => {
 const handleClickMock = handleClick as jest.MockedFunction<typeof handleClick>
 
 describe('<Button>', () => {
-  it('should render correctly', () => {
-    const props = {
-      link: {
-        href: './',
-        value: 'back'
-      }
-    }
-    const { container } = render(<Button {...props} />)
-    expect(container).toMatchSnapshot()
-  })
   it('テキストが表示されているか', () => {
     const props = {
       link: {
