@@ -28,6 +28,5 @@ module.exports = {
     '\\.mdx$': '@storybook/addon-docs/jest-transform-mdx'
   },
   modulePaths: ['.'],
-  snapshotResolver: './src/__test__/snapshotResolver.js',
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$']
 }
