@@ -5,9 +5,6 @@ import initStoryshots, {
 
 initStoryshots({
   test: multiSnapshotWithOptions(),
-  integrityOptions: {
-    integrityOptions: { cwd: __dirname } // it will start searching from the current directory
-  },
   stories2snapsConverter: new Stories2SnapsConverter({
     snapshotExtension: '.snap.js'
   })
