@@ -9,6 +9,7 @@ exports[`Storyshots Button Primary 1`] = `
     href="/next"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onTouchStart={[Function]}
   >
     back
   </a>
@@ -24,6 +25,7 @@ exports[`Storyshots Button Secondary 1`] = `
     href="/next"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onTouchStart={[Function]}
   >
     start
   </a>
