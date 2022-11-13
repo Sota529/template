@@ -5,7 +5,7 @@ import { Button } from 'src/components/Button'
 const next: NextPage = () => {
   return (
     <div>
-      <Button link={{ href: '/next', value: 'back' }} />
+      <Button link={{ href: '/', value: 'back' }} />
     </div>
   )
 }
