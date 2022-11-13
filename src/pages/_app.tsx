@@ -1,7 +1,13 @@
 import 'src/styles/reset.css'
+import { AppProps } from 'next/app'
+import { FC } from 'react'
 
-function MyApp({ Component, pageProps }: any): any {
-  return <Component {...pageProps} />
+const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
