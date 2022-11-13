@@ -1,9 +1,10 @@
+// eslint-disable-next-line simple-import-sort/imports
 import '@testing-library/jest-dom/extend-expect'
 
 import { fireEvent, render } from '@testing-library/react'
-import { handleClick } from 'src/utis'
 
 import { Button } from './Button'
+import { handleClick } from 'src/utis'
 
 jest.mock('src/utis', () => {
   return { ...jest.requireActual('./Button'), handleClick: jest.fn() }
