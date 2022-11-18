@@ -12,9 +12,10 @@ type Respnse = Array<{
 const Home: NextPage = () => {
   const { data: user } = useSWR<Respnse>(
     'api/user',
-    async () => await fetch('api/user').then(async (res) => await res.json())
+    async () =>
+      await fetch('https:myapi/user').then(async (res) => await res.json())
   )
-  if (user === undefined) return <>loading</>
+  if (user === undefined) return <p>loading</p>
   return (
     <div>
       <Link href="/next">
