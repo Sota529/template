@@ -28,5 +28,9 @@ module.exports = {
     '\\.mdx$': '@storybook/addon-docs/jest-transform-mdx'
   },
   modulePaths: ['.'],
-  transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$']
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '^.+\\.module\\.(css|sass|scss)$'
+  ],
+  setupFiles: ['./jest.setup.js']
 }
