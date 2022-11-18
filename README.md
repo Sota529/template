@@ -1,3 +1,6 @@
+[![<status>](https://circleci.com/gh/Sota529/template.svg?style=shield)](<LINK>)
+
+
 ## これは何
 ちょっと試したいときに、環境整えるの面倒臭いと思っていたので作りました
 
