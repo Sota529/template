@@ -1,13 +1,13 @@
 version: 2.1
+orbs:
+  node: circleci/node@5.0.2
 jobs:
-  Using-Node:
-    docker:
-      - image: cimg/node:17.2
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+  test:
+    executor: node/default
     steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
       - run:
-          name: runnning test
-          command: |
-            npm run dev
+          command: yarn test
+          name: Run tests
