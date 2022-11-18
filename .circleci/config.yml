@@ -16,4 +16,10 @@ jobs:
           name: Build app
       - persist_to_workspace:
           root: ~/project
-          paths: .
+          paths:
+            - .
+
+workflows:
+  build_and_test_my_app:
+    jobs:
+      - build_and_test
