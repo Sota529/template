@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
 jobs:
-  build_and_test:
+  test:
     executor: node/default
     steps:
       - checkout
@@ -11,15 +11,12 @@ jobs:
       - run:
           command: yarn test
           name: Run tests
-      - run:
-          command: yarn build
-          name: Build app
       - persist_to_workspace:
           root: ~/project
           paths:
             - .
 
 workflows:
-  build_and_test_my_app:
+  test_my_app:
     jobs:
-      - build_and_test
+      - test
