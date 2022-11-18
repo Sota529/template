@@ -6,7 +6,7 @@ if (typeof window === 'undefined') {
 } else {
   void (async () => {
     const { worker } = await import('./browser')
-    void worker.start({ onUnhandledRequest: 'bypass' })
+    await worker.start({ onUnhandledRequest: 'bypass' })
   })()
 }
 export {}
