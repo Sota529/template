@@ -7,7 +7,7 @@ import {
 } from '@testing-library/react'
 import { server } from 'src/mocks/server'
 
-import Home from '.'
+import Home from './index.page'
 
 beforeAll(() => {
   server.listen()
