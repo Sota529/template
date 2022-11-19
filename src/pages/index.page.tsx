@@ -10,11 +10,12 @@ type Respnse = Array<{
 }>
 
 const Home: NextPage = () => {
-  const { data: user } = useSWR<Respnse>(
+  const { data: user, error } = useSWR<Respnse>(
     'api/user',
     async () =>
       await fetch('https:myapi/user').then(async (res) => await res.json())
   )
+  if (error instanceof Error) return <p>error</p>
   if (user === undefined) return <p>loading</p>
   return (
     <div>
