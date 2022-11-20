@@ -1,10 +1,6 @@
 import '@testing-library/jest-dom/extend-expect'
 
-import {
-  render,
-  screen,
-  waitForElementToBeRemoved
-} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event' // ユーザーにクリックさせるため必要
 import { getPage, initTestHelpers } from 'next-page-tester'
 import { server } from 'src/mocks/server'
@@ -22,7 +18,6 @@ describe('遷移テスト', () => {
       route: '/index'
     })
     render(page)
-    await waitForElementToBeRemoved(() => screen.getByText('loading'))
     userEvent.click(screen.getByText('Next'))
     expect(await screen.findByText('back')).toBeInTheDocument()
   })
