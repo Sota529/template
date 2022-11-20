@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "run-s --continue-on-error lint:eslint lint:prettier",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier -c .",
     "fix": "run-s --continue-on-error fix:eslint fix:prettier",

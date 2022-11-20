@@ -1,10 +1,10 @@
 ---
-name: "component"
-root: "src"
-output: "**/*"
+name: 'component'
+root: 'src'
+output: '**/*'
 ignore: []
 questions:
-  name: "Please enter a component name (no blanket)."
+  name: 'Please enter a component name (no blanket).'
 ---
 
 # `{{ inputs.name | pascal }}/index.tsx`
