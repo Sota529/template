@@ -10,13 +10,13 @@ type Respnse = Array<{
 }>
 
 const Home: NextPage = () => {
-  const { data: user, error } = useSWR<Respnse>(
+  const { data: user } = useSWR<Respnse>(
     'api/user',
     async () =>
       await fetch('https:myapi/user').then(async (res) => await res.json())
   )
-  if (error instanceof Error) return <p>error</p>
-  if (user === undefined) return <p>loading</p>
+  // eslint-disable-next-line no-console
+  console.log(user)
   return (
     <div>
       <Link href="/next">
