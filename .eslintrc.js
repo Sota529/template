@@ -26,7 +26,8 @@ module.exports = {
       files: ['./src/**/*.stories.mdx', './src/**/*.stories.@(js|jsx|ts|tsx)'],
       rules: {
         ...module.rules,
-        '@typescript-eslint/consistent-type-assertions': 'off'
+        '@typescript-eslint/consistent-type-assertions': 'off',
+        'import/no-anonymous-default-export': 'off'
       }
     }
   ]
