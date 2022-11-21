@@ -15,6 +15,7 @@ module.exports = {
     'next/core-web-vitals',
     'eslint:recommended',
     'standard-with-typescript',
+    'plugin:json/recommended',
     'prettier'
   ],
   parserOptions: {
