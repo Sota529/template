@@ -10,20 +10,22 @@ questions:
 # `{{ inputs.name | pascal }}/index.tsx`
 
 ```typescript
-import React from 'react';
 import styles from './style.module.scss';
 
 type Props = {
   children :React.ReactNode;
 };
 
-export const {{inputs.name | pascal }}: React.FC<Props> = ({children}) =>(<div>{children}</div>)
+export const {{inputs.name | pascal }}: React.FC<Props> = () => {
+  return<></>
+}
+
 ```
 
 # `{{ inputs.name | pascal }}/style.module.scss`
 
 ```scss
-.{{inputs.name}} {}
+
 ```
 
 # `{{ inputs.name | pascal }}/index.stories.tsx`
@@ -32,8 +34,25 @@ export const {{inputs.name | pascal }}: React.FC<Props> = ({children}) =>(<div>{
 import { {{inputs.name | pascal }} } from "./";
 
 export default {
-  component: {{inputs.name | pascal }},
+  component: {{inputs.name | pascal }}
 };
 
 export const Template = {};
+```
+
+# `{{ inputs.name | pascal }}/index.test.tsx`
+
+```typescript
+import { render } from "@testing-library/react"
+
+import { {{inputs.name | pascal }} } from "."
+
+
+describe('{{inputs.name | pascal }}', () => {
+  it('propsから渡されたものが表示されているか', () => {
+    const props = {}
+    const { getByTestId } = render(<{{inputs.name | pascal }} {...props} />)
+    expect(getByTestId(〇〇)).toHaveTextContent(〇〇)
+  })
+})
 ```
