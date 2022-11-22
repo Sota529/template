@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import { UserList } from 'src/components/UserList'
 import useSWR from 'swr'
 
 type Respnse = Array<{
@@ -15,13 +16,13 @@ const Home: NextPage = () => {
     async () =>
       await fetch('https:myapi/user').then(async (res) => await res.json())
   )
-  // eslint-disable-next-line no-console
-  console.log(user)
   return (
     <div>
       <Link href="/next">
         <a>Next</a>
       </Link>
+      <h2>CSR FETCH</h2>
+      {user === undefined ? <div>loading</div> : <UserList user={user} />}
     </div>
   )
 }
