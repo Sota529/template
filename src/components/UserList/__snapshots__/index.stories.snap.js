@@ -14,5 +14,3 @@ Array [
   </p>,
 ]
 `
-
-exports[`Storyshots components/UserList Template 1`] = `null`
