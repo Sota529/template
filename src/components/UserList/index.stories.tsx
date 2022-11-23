@@ -3,7 +3,8 @@ import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
 import { UserList } from './'
 
 export default {
-  component: UserList
+  component: UserList,
+  title: 'UserList'
 } as ComponentMeta<typeof UserList>
 
 export const Index: ComponentStoryObj<typeof UserList> = {
