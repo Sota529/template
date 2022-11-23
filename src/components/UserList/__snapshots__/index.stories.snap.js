@@ -13,7 +13,7 @@ Array [
     uuid-2
   </p>,
 ]
-`
+`;
 
 exports[`Storyshots components/UserList Index 1`] = `
 Array [
@@ -28,4 +28,4 @@ Array [
     uuid-2
   </p>,
 ]
-`
+`;
