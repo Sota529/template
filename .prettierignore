@@ -3,3 +3,4 @@ node_modules
 public
 README.md
 __snapshots__
+coverage
